@@ -1,27 +1,27 @@
 <html>
     <head>
-        
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ryncb portfolio</title>
-        
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/6c54aeda95.js"></script>
         <link rel=stylesheet href="style.css">
     </head>
-    
+
     <script type="text/javascript">
         $(document).ready(function() {
             $("#logo").hover(function(){
-                $(this).prop("src","rc-active.png"); 
+                $(this).prop("src","rc-active.png");
             },function(){
                 $(this).prop("src","rc.png");
             });
-            
-        
+
+
             //Smooth scrolling when click to nav
             $('#top-nav > ul > li > a').click(function (e) {
                 e.preventDefault();
@@ -55,11 +55,11 @@
                     }
                 });
             }
-            
-            
+
+
         });
     </script>
-    
+
     <body class="container">
         <nav class="navbar navbar-default navbar-fixed-top container">
             <div class="navbar-header page-scroll">
@@ -100,14 +100,19 @@
                 <div class="line"></div>
                 <div class="container-fluid project-list">
                     <div class="row">
+
+                      <a href="https://play.google.com/store/apps/details?id=com.arynecabatan.rynwatchface" target="_blank">
                         <div class="project-item col-md-3 col-md-offset">
                             <div>
-                                <img class="img-responsive project-picture" src="https://i.imgur.com/r1zT6rW.png"/>
+                                <img class="img-responsive project-picture" src="https://i.imgur.com/lpXYoA0.png"/>
                                 <div class="overlay">
-                                    <div class="project-text text-center">Working in progress</div>
+                                    <div class="project-text text-center">Simple Watch Face</div>
                                 </div>
                             </div>
                         </div>
+                      </a>
+
+
                         <div class="project-item col-md-3">
                             <div>
                                 <img class="img-responsive project-picture" src="https://i.imgur.com/r1zT6rW.png"/>
@@ -134,7 +139,6 @@
                         </div>
                     </div>
                 </div>
-                
             </section>
             <section id="contact">
                 <h1 class="text-center">Contact me</h1>
@@ -157,19 +161,15 @@
                     <div style="display:none;" id="thankyou_message">
                         <h2 class="text-center">Thank you for contacting, I'll get back to you soon.</h2>
                     </div>
-                    
+
                     <script data-cfasync="false" type="text/javascript"
   src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
                 </div>
             </section>
-            
+
             <div class="text-center">
                 <p>&#169 Aryne, 2017</p>
             </div>
         </div>
-        
-          
-        
     </body>
 </html>
-
