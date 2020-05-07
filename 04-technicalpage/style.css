@@ -1,0 +1,251 @@
+/*Typeface for the whole website*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;0,800;1,400&display=swap');
+
+/*Typeface for code snippet container*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+/*
+CSS Lock by Tim Brown
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+Simplified to
+clamp(minvalue(px), idealvalue(vw), maxvalue)
+
+I used this method callef fluid responsive for sizing my typefaces without using lot of queries. The clamp is just new web attrs so some browser might not support it
+In addition to that, this also gives a dynamic range of numbers instead of static.
+*/
+
+/*Declaring Variables*/
+:root{
+  --font-w-body: 18px;
+  --font-m-body: 16px;
+  --font-body: clamp(var(--font-m-body), 2.34vw, var(--font-w-body));
+
+  --clr-dark: #011936;
+  --clr-light: #e5dada;
+  --clr-accent: #FF3366;
+}
+
+html{
+  font-family: 'Merriweather Sans', sans-serif;
+  line-height: clamp(28px, 2.34vw, 31px);
+  color: var(--clr-dark);
+  scroll-behavior: smooth !important;
+}
+
+a{
+  color: var(--clr-dark);
+  text-decoration: none;
+}
+
+/*Used grid area for more practice on using grid*/
+body{
+  font-size: var(--font-body);
+  display: grid;
+  background: var(--clr-light);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "bodycontent"
+    "footer";
+}
+
+#topnavigation{
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10% 0 10%;
+  align-content: center;
+  align-items: center;
+  height: 72px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navigation-container img[alt="Logo"]{
+  height: 48px;
+}
+
+#hamburger {
+  display: grid;
+  grid-gap: 4px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: var(--clr-dark);
+  transition: 0.4s;
+}
+
+.burgermode .bar1 { transform: translate(0, 7px) rotate(-45deg); }
+.burgermode .bar2 { opacity: 0; }
+.burgermode .bar3 { transform: translate(0, -7px) rotate(45deg); }
+
+#navigation-menu{
+  display: flex;
+  align-items: center;
+}
+
+#navigation-menu ul{
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+
+#navigation-menu li{
+  margin-left: 24px;
+}
+
+.navigation-mobilemenu{
+  padding: 0 10% 0 10%;
+  overflow-y: scroll;
+  height: 0;
+  opacity: 0;
+  transition: all 1s ease-out;
+box-shadow: 0px -3px 0px var(--clr-accent) inset;
+}
+
+.burgermode .navigation-mobilemenu{
+  height: auto;
+  opacity: 1;
+}
+
+.navigation-mobilemenu .toggle-switch{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.navigation-mobilemenu ul{
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.navigation-mobilemenu li{
+  height: auto;
+  max-height: 48px;
+  padding: 8px 0 8px 0;
+  border-bottom: 0.5px solid rgba(1,24,54,0.2);
+}
+
+#sidenavigation{
+  grid-area: sidenav;
+  height: 72px;
+  background: var(--clr-dark);
+  display: none;
+  width: 100%;
+  color: var(--clr-light);
+  padding: 2.5% 0 0 2.5%;
+}
+
+#sidenavigation ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidenavigation li{
+  height: 42px;
+}
+
+#sidenavigation p{
+  font-weight: 700;
+}
+
+#sidenavigation a{
+  color: var(--clr-light);
+  font-size: 0.75em;
+}
+
+#sidenavigation img{
+  height: 72px;
+}
+
+
+#bodycontent{
+  grid-area: bodycontent;
+  height: 72px;
+  width: 100%;
+  padding: 0 10% 0 10%;
+}
+
+#bodycontent li{
+    font-size: 0.90em;
+}
+
+.information{
+  padding-top: 48px;
+}
+
+
+#footer{
+  grid-area: footer;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 48px;
+  margin: auto;
+  display:
+}
+
+.code-container{
+  background: var(--clr-dark);
+  color: var(--clr-light);
+  font-size: 0.7em;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1em;
+  padding: 8px 0 8px 16px;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px){
+  body{
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "sidenav header"
+      "sidenav bodycontent"
+      "sidenav footer";
+  }
+
+  #sidenavigation{
+    height: 100vh;
+    display: block;
+    width: 300px;
+    overflow-x: auto;
+    position: fixed;
+  }
+
+  #bodycontent{
+    padding-left: calc(300px + 10%);
+  }
+
+
+  .navigation-mobilemenu{
+    display:none;
+  }
+
+  #hamburger{
+    display: none;
+  }
+
+  #navigation-menu ul{
+    display: flex;
+  }
+
+  .navigation-container{
+    justify-content: flex-end;
+  }
+
+  .navigation-container img[alt="Logo"]{
+    display: none;
+  }
+}

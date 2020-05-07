@@ -1,0 +1,227 @@
+*{
+
+}
+
+body{
+  background: #f5f5f5;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header{
+  margin: 5% 0 2% 0;
+  width: 38%;
+  align-self: center;
+}
+
+main{
+  width: 34%;
+  align-self: center;
+  padding: 0 2% 40px 2%;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: white;
+}
+
+h1{
+  font-size: 1.5em;
+}
+
+p{
+  font-size: 1.0em;
+}
+
+legend{
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+form{
+  margin: 20px 0 0 0;
+}
+
+fieldset{
+  border: none;
+  margin: 50px 0 0 0;
+}
+
+label{
+  font-size: 0.85em;
+}
+
+#fullname{
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap: 32px;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  margin: 7% 0 0 0;
+}
+
+input[type=text],[type=tel], [type=email], [type=number], [list=year], [list=address_province]{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  color: black;
+  margin: 2% 0 0 0;
+  transition: all 0.3s ease;
+}
+
+input[type=text]:focus,[type=tel]:focus, [type=email]:focus, [type=number]:focus, [list=year]:focus, [list=address_province]:focus{
+  border-bottom: 2px solid black;
+}
+
+select{
+  background: transparent;
+  outline: none;
+  border: none;
+  margin: 2% 0 0 0;
+  border-bottom: 1px solid black;
+}
+
+.form-birthday{
+  display: grid;
+  grid-template-columns:50% 20% 20%;
+  grid-column-gap: 5%;
+  margin: 2% 0 0 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-address1{
+  display: grid;
+  grid-template-columns: 20% 75%;
+  grid-column-gap: 5%;
+  margin: 2% 0 0 0;
+}
+
+.form-address2{
+  display: grid;
+  grid-template-columns: 50% 12% 28%;
+  grid-column-gap: 5%;
+  margin: 4% 0 0 0;
+}
+
+.radiocheck-form{
+  display: flex;
+  align-items: center;
+  margin: 3% 0 0 0;
+}
+
+.radiocheck-form p{
+  margin: 0 0 0 2%;
+}
+
+.other-form{
+  display: flex;
+  align-items: flex-start;
+  margin: 3% 0 0 0;
+  flex-direction: column;
+}
+
+.other-form p{
+  margin: 2% 0 2% 0;
+}
+
+.other-form input{
+  width: 100%;
+}
+
+textarea{
+  border: 1px solid black;
+  border-radius: 4px;
+  resize: vertical;
+  padding: 5%;
+  outline: none;
+}
+
+textarea:focus{
+  border: 2px solid black;
+}
+
+button{
+  background-color: black;
+  color:white;
+  border:none;
+  font-size: 1.2em;
+  border-radius: 36px;
+  max-width: auto;
+  padding: 2%;
+}
+
+footer{
+  text-align: center;
+  padding: 3% 0 3% 0;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+
+}
+
+@media only screen and (max-width: 600px) {
+  header{
+    width: 96%;
+    margin: 5% 0 0 5%;
+  }
+  main{
+    width:96%;
+    background: transparent;
+    box-shadow: none;
+  }
+
+}
+@media only screen and (min-width: 600px) {
+  header{
+    width: 88%;
+  }
+
+  main{
+    width:84%;
+  }
+}
+@media  only screen and (min-width: 768px) {
+  header{
+    width: 68%;
+  }
+
+  main{
+    width:64%;
+  }
+}
+@media  only screen and (min-width: 992px) {
+  header{
+    width: 54%;
+  }
+  main{
+    width:50%;
+  }
+}
+@media  only screen and (min-width: 1200px) {
+    header{
+      width: 38%;
+    }
+
+    main{
+      width:34%;
+    }
+}

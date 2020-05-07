@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linkin Park - Tribute Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3d6adec820.js" crossorigin="anonymous"></script>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      //Change navigation background when scrolled from the top
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("navi").classList.add("addnav");
+      }else{
+        document.getElementById("navi").classList.remove("addnav");
+      }
+    }
+    function navfunction() {
+      //add a new class to the get DOM to hide and show blocks
+      document.getElementById("hamburger").classList.toggle("burgermode");
+      document.getElementById("navi").classList.toggle("mobile-toggle");
+    }
+  </script>
+</head>
+<body id="main">
+
+  <!--Navigation Bar-->
+  <nav id="navi">
+    <div class="nav-container">
+      <img src="img/linkinpark_logo.svg" alt="Linkin Park logo" width="48">
+      <div id="menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#members">Member</a></li>
+            <li><a href="#album">Album</a></li>
+        </ul>
+        <!--Burger button, the onclick function will trigger the script to run thus adding a new class-->
+        <div id="hamburger" onclick="navfunction()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+    </div>
+    <!--Mobile menu-->
+    <div id="mobile-menu">
+      <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#members">Member</a></li>
+          <li><a href="#album">Album</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header>
+    <!--hero image-->
+    <div id="title">
+      <h2>"But all the things I couldn't understand<br/>Never could've planned<br/>They made me who I am"</h2>
+      <p><br/>-Sharp Edges, Linkin Park 2018</p>
+    </div>
+    <div id="more_info"><a href="#about">
+      <p>Learn More</p>
+      <img src="img/down.svg" alt="Linkin Park logo" width="48">
+    </a>
+    </div>
+  </header>
+  <!--Details about the page-->
+  <section id="tribute-info">
+    <!--About Section-->
+    <article id="about">
+      <h2>About Linkin Park</h2>
+      <div>
+        <figure class="img-div">
+          <img id="image" src="img/Linkin-Park.jpg" alt="all OG Members"/>
+          <figcaption id="img-caption">Linkin Park Members</figcaption>
+        </figure>
+        <div class="description">
+          <p>
+            In 2003, MTV2 named Linkin Park the sixth-greatest band of the music video era and the third-best of the new millennium. Billboard ranked Linkin Park No. 19 on the Best Artists of the Decade chart. In 2012, the band was voted as the greatest artist of the 2000s in a Bracket Madness poll on VH1. In 2014, the band was declared as the Biggest Rock Band in the World Right Now by Kerrang!. Linkin Park has sold over 75 million records worldwide, making them one of the world's best-selling music artists and has won two Grammy Awards.
+          </p><br/>
+          <p>
+            In 2003, MTV2 named Linkin Park the sixth-greatest band of the music video era and the third-best of the new millennium. Billboard ranked Linkin Park No. 19 on the Best Artists of the Decade chart. In 2012, the band was voted as the greatest artist of the 2000s in a Bracket Madness poll on VH1. In 2014, the band was declared as the Biggest Rock Band in the World Right Now by Kerrang!. Linkin Park has sold over 75 million records worldwide, making them one of the world's best-selling music artists and has won two Grammy Awards.
+          </p>
+          <br/>
+          <p><a href="" target="https://www.linkinpark.com/"><strong>More Information</strong></a></p>
+        </div>
+      </div>
+    </article>
+    <!--Members section-->
+    <article id="members">
+      <h2>Members</h2>
+      <div>
+        <figure class="memberlist">
+          <img src="https://i.imgur.com/fcLl3dN.jpg" alt="Dave Farell">
+          <figcaption><strong>Dave Farell</strong><br/>Bass Guitar</figcaption>
+        </figure>
+        <figure class="memberlist">
+          <img class="memberphoto" src="https://i.imgur.com/3gHOqtt.jpg" alt="Chester Bennington">
+          <figcaption><strong>Chester Bennington</strong><br/>Vocals</figcaption>
+        </figure>
+        <figure class="memberlist">
+          <img class="memberphoto" src="https://i.imgur.com/jCBtPuG.jpg" alt="Mike Shinoda">
+          <figcaption><strong>Mike Shinoda</strong><br/>Pianist</figcaption>
+        </figure>
+        <figure class="memberlist">
+          <img class="memberphoto" src="https://i.imgur.com/9ux3va5.jpg" alt="Brad Delson">
+          <figcaption><strong>Brad Delson</strong><br/>Bass Guitar</figcaption>
+        </figure>
+        <figure class="memberlist">
+          <img class="memberphoto" src="https://i.imgur.com/4CqnHt6.jpg" alt="Joe Hahn">
+          <figcaption><strong>Joe Hahn</strong><br/>Turntable</figcaption>
+        </figure>
+        <figure class="memberlist">
+          <img class="memberphoto" src="https://i.imgur.com/GukEfxu.jpg" alt="Rob Bourdon">
+          <figcaption><strong>Rob Bourdon</strong><br/>Drum</figcaption>
+        </figure>
+      </div>
+    </article>
+    <!--Album-->
+    <article id="album">
+      <h2>Album</h2>
+      <div>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/TMK7GRO.jpg" alt="Hybrid Theory">
+          <figcaption><strong>Hybrid Theory</strong><br/>October 24, 2000</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/eAS1Fbu.jpg" alt="Meteora">
+          <figcaption><strong>Meteora</strong><br/>March 23, 2003</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/KVTCA5U.jpg" alt="Minutes to Midnight">
+          <figcaption><strong>Minutes to Midnight</strong><br/>May 14, 2007</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/qzknbnm.jpg" alt="A Thousand Suns">
+          <figcaption><strong>A Thousand Suns</strong><br/>September 8, 2010</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/Q8wDSPv.jpg" alt="Living Things">
+          <figcaption><strong>Living Things</strong><br/>June 12, 2012</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/pITh6TA.jpg" alt="The Hunting Party">
+          <figcaption><strong>The Hunting Party</strong><br/>June 13, 2014</figcaption>
+        </figure>
+        <figure class="albumlist">
+          <img class="albumart" src="https://i.imgur.com/8Ilw2T1.jpg" alt="One More Light">
+          <figcaption><strong>One More Light</strong><br/>May 19, 2017</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+  <!--Social Links-->
+  <footer>
+    <h3>Social Links</h3>
+    <div class="icons">
+      <a href="https://www.facebook.com/linkinpark/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/linkinpark/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/linkinpark" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/channel/UCZU9T1ceaOgwfLRq7OKFU4Q" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="coder">
+      <p><br/>Copyright <a href="http://ryn.design" target="_blank" class="aryne">Ryn Design</a>, 2020</p>
+    </div>
+  </footer>
+</body>
+</html>

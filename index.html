@@ -1,180 +1,30 @@
-<html>
-    <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Header Color -->
-        <meta name="theme-color" content="#15161B">
-        <meta name="msapplication-navbutton-color" content="#15161B">
-        <meta name="apple-mobile-web-app-status-bar-style" content="#15161B">
-
-        <title>ryncb portfolio</title>
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://use.fontawesome.com/6c54aeda95.js"></script>
-        <link rel=stylesheet href="style.css">
-    </head>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#logo").hover(function(){
-                $(this).prop("src","rc-active.png");
-            },function(){
-                $(this).prop("src","rc.png");
-            });
-
-
-            //Smooth scrolling when click to nav
-            $('#top-nav > ul > li > a').click(function (e) {
-                e.preventDefault();
-                var curLink = $(this);
-                var scrollPoint = $(curLink.attr('href')).position().top;
-                $('body,html').animate({
-                    scrollTop: scrollPoint
-                }, 500);
-            })
-            $(window).scroll(function () {
-                onScrollHandle();
-            });
-            function onScrollHandle() {
-                //Navbar shrink when scroll down
-                $(".navbar-default").toggleClass("navbar-shrink", $(this).scrollTop() > 50);
-                //Get current scroll position
-                var currentScrollPos = $(document).scrollTop();
-                //Iterate through all node
-                $('#top-nav > ul > li > a').each(function () {
-                    var curLink = $(this);
-                    var refElem = $(curLink.attr('href'));
-                    //Compare the value of current position and the every section position in each scroll
-                    if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
-                        //Remove class active in all nav
-                        $('#top-nav > ul > li').removeClass("active");
-                        //Add class active
-                        curLink.parent().addClass("active");
-                    }
-                    else {
-                        curLink.parent().removeClass("active");
-                    }
-                });
-            }
-
-
-        });
-    </script>
-
-    <body class="container">
-        <nav class="navbar navbar-default navbar-fixed-top container">
-            <div class="navbar-header page-scroll">
-                <button id="navbar-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img id="logo" src="rc.png" alt="Ryn Logo"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="top-nav">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="content">
-            <section id="about">
-                <div class="container-fluid" style="display: block">
-                    <img class="img-responsive img-circle" id="picture" src="https://i.imgur.com/6FXuaXg.png" alt="_blank"/>
-                    <h1 class="text-center">Aryne Cabatan</h1>
-                    <h3 class="text-center">Stay Low Key X Stay Pogi</h3>
-                    <div class="line"></div>
-                    <h4 class="text-center">Hi! Im a student trying to teach himself to code, currently on the way to Full Stack Web Development. </h4>
-                    <div id="social_links" class="text-center">
-				        <a href="https://twitter.com/arynecabatan"class="fa fa-twitter">&nbsp</a>
-				        <a href="https://www.instagram.com/arynecabatan" class="fa fa-instagram">&nbsp</a>
-				        <a href="http://github.com/arynecabatan" class="fa fa-github">&nbsp</a>
-                        <a href="https://www.linkedin.com/in/aryne-cabatan-50336312a/" class="fa fa-linkedin">&nbsp</a>
-                    </div>
-                </div>
-            </section>
-            <section id="portfolio">
-                <h1 class="text-center">Portfolio</h1>
-                <div class="line"></div>
-                <div class="container-fluid project-list">
-                    <div class="row">
-
-                      <a href="https://play.google.com/store/apps/details?id=com.arynecabatan.rynwatchface" target="_blank">
-                        <div class="project-item col-md-3 col-md-offset">
-                            <div>
-                                <img class="img-responsive project-picture" src="https://i.imgur.com/lpXYoA0.png"/>
-                                <div class="overlay">
-                                    <div class="project-text text-center">Simple Watch Face</div>
-                                </div>
-                            </div>
-                        </div>
-                      </a>
-
-
-                        <div class="project-item col-md-3">
-                            <div>
-                                <img class="img-responsive project-picture" src="https://i.imgur.com/r1zT6rW.png"/>
-                                <div class="overlay">
-                                    <div class="project-text text-center">Working in progress</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item col-md-3">
-                            <div>
-                                <img class="img-responsive project-picture" src="https://i.imgur.com/r1zT6rW.png"/>
-                                <div class="overlay">
-                                    <div class="project-text text-center">Working in progress</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-item col-md-3">
-                            <div>
-                                <img class="img-responsive project-picture" src="https://i.imgur.com/r1zT6rW.png"/>
-                                <div class="overlay">
-                                    <div class="project-text text-center">Working in progress</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <h1 class="text-center">Contact me</h1>
-                <div class="line"></div>
-                <div class="container-fluid form-aryne">
-                    <form id="gform" class="form-horizontal" action="https://script.google.com/macros/s/AKfycbxIEhTMhU0ripuPioWn0XrHLKophDr7_iIs6jS1HpArsssMK4cX/exec" method="POST">
-                        <div class="form-group">
-                            <input type="text" class="form-control custom-control" placeholder="Name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control custom-control" placeholder="Enter email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="5" required name="message" class="form-control custom-control" placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default btn-custom">Submit</button>
-                        </div>
-                    </form>
-                    <div style="display:none;" id="thankyou_message">
-                        <h2 class="text-center">Thank you for contacting, I'll get back to you soon.</h2>
-                    </div>
-
-                    <script data-cfasync="false" type="text/javascript"
-  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-                </div>
-            </section>
-
-            <div class="text-center">
-                <p>&#169 Aryne, 2017</p>
-            </div>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1>
+    <meta name="theme-color" content="#212121">
+    <meta name="msapplication-navbutton-color" content="#212121">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#212121">
+    <link rel='shortcut icon' type='image/x-icon' href='/image/favicon.ico'/>
+    <title>Ryn Design Web Portfolio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3d6adec820.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main id="content">
+      <img src="image/ryndesignlogo.svg" alt="Logo">
+      <button type="button" name="button"> <a href="http://ryn.design" target="_blank">Design Portfolio</a></button>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/arynecabatan/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.instagram.com/ryn.design/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.behance.net/arynecabatan" target="_blank"><i class="fab fa-behance"></i></a></li>
+        <li><a href="https://dribbble.com/aryne" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+      </ul>
+      <p>Copyright Ryn Design, 2020</p>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@577&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Ryn Survey Form</h1>
+      <p id="description">How is my service?</p>
+    </header>
+    <main class="form-card">
+      <!--Material UI Card like-->
+      <form id="survey-form">
+        <fieldset id="personal-information">
+          <legend>Personal Information</legend>
+          <div id="fullname">
+            <div class="form-container">
+              <label id="name-label" for="name">First Name</label>
+              <input type="text" name="name" id="name" placeholder="John" required/>
+            </div>
+            <div class="form-container">
+              <label id="lname-label" for="lname">Last Name</label>
+              <input type="text" name="lname" id="lname" placeholder="Doe" required/>
+            </div>
+          </div>
+          <div class="form-container">
+            <label id="email-label" for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="test@mail.com" required>
+          </div>
+          <div class="form-container">
+            <label id="number-label" for="mobilenumber">Mobile Number</label>
+            <input type="tel" name="mobilenumber" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          </div>
+          <div class="form-container">
+            <label id="birthday-label" for="birthday">Birthday</label>
+            <div class="form-birthday">
+              <select id="dropdown" required>
+                <option value="" selected disabled hidden>Month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+              <input type="number" name="number" id="number" placeholder="Day" min="01" max="31" required>
+              <input type="number" list="birthyear" name="birthyear" placeholder="Year" min="1900" max="2010" required>
+              <datalist id="birthyear">
+                <option value="1994">
+                <option value="1995">
+                <option value="1996">
+                <option value="1997">
+                <option value="1998">
+                <option value="1999">
+                <option value="2000">
+                <option value="2001">
+              </datalist>
+            </div>
+          </div>
+          <div class="form-container">
+            <label id="address" for="address">Address</label>
+            <div class="form-address1">
+              <input type="number" name="streetno" min="0" max="9999" placeholder="Str No.">
+              <input type="text" name="streetname" placeholder="Street Name">
+            </div>
+            <div class="form-address2">
+              <input type=text name="city" placeholder="City">
+              <select id="province">
+                <option value="" selected disabled hidden>PR</option>
+                <option value="ab">AB</option>
+                <option value="bc">BC</option>
+                <option value="mb">MB</option>
+                <option value="nb">NB</option>
+                <option value="nl">NL</option>
+                <option value="nt">NT</option>
+                <option value="nu">NU</option>
+                <option value="on">ON</option>
+                <option value="pe">PE</option>
+                <option value="qc">QC</option>
+                <option value="sk">SK</option>
+                <option value="yk">YK</option>
+              </select>
+              <input type="text" name="zipcode" placeholder="Zip Code" minlength="6" maxlength="7">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tell me how I did!</legend>
+          <div class="form-container">
+            <label for="servicerate">How is my service?</label>
+            <div class="radiocheck-form">
+              <input type="radio" name="servicerate" value="ExtremelyDissatisfied">
+              <p>Extremely Dissatisfied</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="radio" name="servicerate" value="SomewhatDissatisfied">
+              <p>Somewhat Dissatisfied</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="radio" name="servicerate" value="NeitherSatisfiedDissatisfied">
+              <p>Neither Satisfied or Dissatisfied</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="radio" name="servicerate" value="SomewhatSatisfied">
+              <p>Somewhat Satisfied</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="radio" name="servicerate" value="ExtremelySatisfied">
+              <p>Extremely Satisfied</p>
+            </div>
+          </div>
+          <div class="form-container">
+            <label for="servicerate">Where do you heard from us?</label>
+            <div class="radiocheck-form">
+              <input type="checkbox" name="referral" value="Friend">
+              <p>Friend</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="checkbox" name="referral" value="Newspaper Advertisement">
+              <p>Newspaper Advertisement</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="checkbox" name="referral" value="Digital Advertisement">
+              <p>Digital Advertisement</p>
+            </div>
+            <div class="radiocheck-form">
+              <input type="checkbox" name="referral" value="Social Media">
+              <p>Social Media</p>
+            </div>
+            <div class="other-form">
+              <p>Others? Specify</p>
+              <input type="text" name="referral" placeholder="Others">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Comments</legend>
+          <div class="form-container">
+            <textarea name="comments" rows="5" placeholder="Comments"></textarea>
+          </div>
+        </fieldset>
+        <div class="form-container">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </main>
+
+  <footer>
+    <p>Copyright <a href="http://ryn.design"><strong>Ryn Design</strong></a>, 2020</p>
+  </footer>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+/*Set tags in a customized way in a boilerplate like css*/
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-sizing: normal;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0.67em 0;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+img, svg, video, canvas {
+  height: auto;
+}
+
+audio {
+  width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+svg {
+  overflow: hidden;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
