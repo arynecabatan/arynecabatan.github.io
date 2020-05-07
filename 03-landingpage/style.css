@@ -170,6 +170,11 @@ margin-left: 10%;
   color: white;
 }
 
+.nav-links li a{
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
 .nav-links{
   display: none;
 }
