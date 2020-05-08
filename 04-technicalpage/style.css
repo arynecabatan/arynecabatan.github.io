@@ -22,7 +22,7 @@ In addition to that, this also gives a dynamic range of numbers instead of stati
   --font-body: clamp(var(--font-m-body), 2.34vw, var(--font-w-body));
 
   --clr-dark: #011936;
-  --clr-light: #e5dada;
+  --clr-light: #fafafa;
   --clr-accent: #FF3366;
 }
 
