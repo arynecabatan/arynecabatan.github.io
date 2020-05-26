@@ -6,11 +6,8 @@
     <title>Plateau Driving School</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <!--font awesome kit for social media logos-->
     <script src="https://kit.fontawesome.com/3d6adec820.js" crossorigin="anonymous"></script>
-    <script>
-    //Change the background when scrolled. The value 200 was used to make a good transition of the header logo and the navigation logo
-      window.onscroll = function() {scrollFunction()};
+    <script>window.onscroll = function() {scrollFunction()};
       function scrollFunction() {
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
           document.getElementById("navigation-bar").classList.add("scrollNav");
@@ -18,7 +15,6 @@
           document.getElementById("navigation-bar").classList.remove("scrollNav");
         }
       }
-      //add a new class to the get DOM to hide and show blocks
       function mobilemenu() {
         document.getElementById("hamburger").classList.toggle("burgermode");
         document.getElementById("header").classList.toggle("burgermode");
@@ -26,7 +22,6 @@
     </script>
   </head>
   <body>
-    <!--navigation-->
     <header id="header">
       <nav id="navigation-bar">
         <div id="logo-header">
@@ -53,8 +48,8 @@
     <main class="hero-image">
       <div class="hero-inner">
         <div id="logo">
-          <img src="https://svgshare.com/i/Koo.svg" alt="Logo">
-          <img src="https://svgshare.com/i/KpJ.svg" alt="Title">
+          <img src="images/plateau-driving-school_logo.svg" alt="Logo">
+          <img src="images/plateau-driving-school_title.svg" alt="Title">
         </div>
         <div class="subtitle">
           <h4>Be a better defensive driver.<br/>
@@ -75,22 +70,22 @@ Coquitlam, BC but also operates  anywhere in Lower Mainland. We provide lessons 
       <h2 class="headlinetitle">Why Plateaux<br/>Driving School?</h2>
       <div class="feature-list">
         <div class="feature-item">
-          <img src="https://svgshare.com/i/KmH.svg" alt="LowerMainland">
+          <img src="images/location.svg" alt="LowerMainland">
           <h4>Operates anywhere in Lower Mainland</h4>
           <p>Metro Vancouver, Tri-Cities, Surrey, Pitt Meadows, Maple Ridge, you name it!</p>
         </div>
         <div class="feature-item">
-          <img src="https://svgshare.com/i/Kp7.svg" alt="LowerMainland">
+          <img src="images/language.svg" alt="LowerMainland">
           <h4>Support numbers of languages</h4>
           <p>English, Korean, German, Dutch, Swiss, Filipino and Mandarin</p>
         </div>
         <div class="feature-item">
-          <img src="https://svgshare.com/i/Kmg.svg" alt="LowerMainland">
+          <img src="images/piggy.svg" alt="LowerMainland">
           <h4>Budget-friendly service</h4>
           <p>You save more with Plateaux Driving School</p>
         </div>
         <div class="feature-item">
-          <img src="https://svgshare.com/i/KoT.svg" alt="LowerMainland">
+          <img src="images/schedule.svg" alt="LowerMainland">
           <h4>Flexible Schedule</h4>
           <p>Time and schedule constraint? Don't fret, we at Plateaux Driving School offers custom testimonies.</p>
         </div>
