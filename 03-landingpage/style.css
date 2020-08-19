@@ -71,10 +71,12 @@ p{
   font-weight: 400;
 }
 
-footer a{
+a{
   color: var(--clr--white);
   text-decoration: none;
 }
+
+
 
 /**CODE STARTS HERE**/
 body{
@@ -250,7 +252,6 @@ margin-left: 10%;
   font-size: var(--font-body);
   padding: 14px;
   margin: 3% 0 0 0;
-  width: 150px;
   color: white;
   background-color: var(--clr-cyan);
   border: none;
@@ -267,6 +268,7 @@ section{
   grid-template-columns: repeat(auto-fit, clamp(50%, 100%, 270px));
   justify-content: center;
   align-items: start;
+  text-align: center;
 }
 
 .headlinetitle{
@@ -274,6 +276,7 @@ section{
   font-weight: 500;
   margin-bottom: 60px;
   margin-top: 30px;
+  text-align: center;
 }
 
 .feature-list{
@@ -307,44 +310,46 @@ section{
 }
 
 .card-list-price {
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 4%;
-  overflow-x: scroll;
-  justify-content: start;
-  margin: 0 -3% 0 0;
-  padding: 2% 0 2% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px;
 }
 
 .card-price {
   background-color: white;
   display: grid;
-  grid-template-rows: auto auto 1fr;
-  height: max(312px, 100%);
-  width: 256px;
-  max-width: 100%;
+  height: 400px;
+  width: 320px;
   align-content: start;
   justify-content: center;
-  text-align: center;
-  padding: 4% 18px 0 18px;
+  padding: 18px 32px 0 32px;
   border-radius: 24px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.card-price p {
-  font-weight: 500;
+.card-price h4{
+  font-size: var(--font-title);
+  padding-bottom: 24px;
+  text-align: center;
 }
 
-.card-price h1{
-  margin: 0;
-  line-height: clamp(37px, 4.1vw, 41px);
+.card-price p{
+  line-height: 6px;
 }
 
 .card-price span{
-  margin: 0;
-  font-size: var(--font-title);
-  line-height: clamp(37px, 4.1vw, 41px);
-  font-weight: 500;
+  font-weight: 700;
+}
+
+.card-price-details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.negaspace{
+  margin-top: 12px;
 }
 
 .card-price ul{
@@ -352,14 +357,14 @@ section{
 }
 
 .card-price li{
+  font-size: var(--font-caption);
   list-style-type: none;
-  text-align: left;
   margin-bottom: 10%;
   line-height: clamp(20px, 2.3vw, 24px);
 }
 
 .book-text{
-  margin: 24px 0 24px;
+  margin: 36px 0 24px;
   text-align: center;
 }
 
@@ -374,7 +379,6 @@ section{
   background-repeat: no-repeat;
   text-align: center;
   color: white;
-
 }
 
 #review h4{
@@ -387,9 +391,8 @@ section{
 
 .contact-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   grid-gap: 10%;
 }
 
@@ -425,18 +428,19 @@ section{
   border: 1.5px solid var(--clr-cyan);
 }
 
-
-
 .contact-additional h4{
   font-weight: 400;
+  text-align: center;
 }
 
 .contact-reach, .contact-socialmedia{
     margin-bottom: 36px;
+    text-align: center;
 }
 
 .contact-reach p{
   line-height: clamp(10px, 1.2vw, 12px);
+
 }
 
 .contact-socialmedia ul{
@@ -452,11 +456,18 @@ section{
   margin: auto 24px 0 0;
 }
 
+.contact-link{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+}
+
 footer{
   background: var(--clr-purple);
   margin-top: 36px;
   color: white;
-  padding: 36px 10% 5% 10%;
+  padding: 36px 10% 36px 10%;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -470,7 +481,7 @@ footer p{
 .footer-logo{
   display: flex;
   flex-direction: row;
-  max-height: 90px;
+  max-height: 80px;
   align-items: flex-end;
   justify-content: center;
 }
